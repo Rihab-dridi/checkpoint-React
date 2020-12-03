@@ -1,8 +1,8 @@
 
 import './App.css';
-import { Button, Form, FormGroup, Label, Input }from 'react-bootstrap'; //import the tools of the form 
+import { Button, Form, FormGroup, Label, Input,Badge }from 'react-bootstrap'; //import the tools of the form 
 import { FacebookLoginButton } from "react-social-login-buttons";
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Navbar, Carousel, ControlledCarousell, Alert, setShow } from 'react-bootstrap';
 
 
 
@@ -28,10 +28,31 @@ function App() {
     </ul>
   </div>
 </nav> 
-<div classeName="top">
-<h1>--------------------------------- <span className="font-weight-bold">FeedBack </span>form ---------------------------------</h1>
-      <h2>-----------------------------------------------Welcome-----------------------------------------------</h2>
-      <h6>--------------------------------------------------------------------------------------------------Log in First--------------------------------------------------------------------------------------------------</h6>
+<Carousel>
+  <Carousel.Item interval={1000}>
+    <img
+      className="d-block w-100  "
+      src="https://educationvoterspa.org/wp-content/uploads/2016/02/we-want-to-hear-from-you-post-banner.png"
+      alt="First slide"
+      
+    /> 
+  </Carousel.Item>
+</Carousel>
+
+<Alert variant="success">
+  <Alert.Heading className="Alert">Hey, nice to see you</Alert.Heading>
+  <p className="Alert">
+    Thanks for helping us to improve our website!  Please tell us what you think of our website
+  </p>
+ 
+  
+</Alert>
+      
+<div >
+<h1 className="top">
+    FeedBack <Badge variant="secondary">Form</Badge>
+    <Badge variant="light">Log in First</Badge>
+  </h1>
 </div>
     <form className="App">
       <FormGroup >
